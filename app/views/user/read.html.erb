@@ -1,0 +1,14 @@
+<h1>Read Page</h1>
+<p>This page provides you post lists from user_id.</p>
+
+<% if @is_valid_id %>
+	<strong>Post owner is <%= @u.name %></strong>
+	<br><br>
+	<% for i in 0..(@p.length-1) %>
+		Post <%= i+1 %>:
+		<%= @p[i].msg %>
+		<br>
+	<% end %>
+<% else %>
+	<p> The post is not created because of invalid user id.</p>
+<% end %>

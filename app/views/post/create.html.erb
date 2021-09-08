@@ -1,0 +1,12 @@
+<h1>Post Create</h1>
+<p>This page creates a post from input message and usser_id.</p>
+
+<% if @is_valid_id %>
+	<strong>Post: </strong>
+	<%= @p.msg %>
+	<br>
+	<strong>By: </strong>
+	<%= User.find(@p.user_id).name %>
+<% else %>
+	<p> The post is not created because of invalid user id.</p>
+<% end %>
